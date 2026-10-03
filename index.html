@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bangkok Trip Console 2026</title>
+<meta name="description" content="Bangkok 2026 group trip console · Oct 8–12">
+<style>
+:root{--bg:#0b1020;--panel:#121a2f;--panel2:#17213b;--line:#273352;--text:#f4f7ff;--muted:#9daac7;--cyan:#55d6e8;--green:#59d98e;--amber:#ffc857;--red:#ff6b78;--pink:#f37acb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#1b2750 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,"Noto Sans TC",system-ui,-apple-system,sans-serif}button,a{font:inherit}a{color:inherit}.shell{max-width:1280px;margin:auto;padding:24px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:22px}.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.16em}.top h1{margin:6px 0;font-size:clamp(28px,5vw,48px);line-height:1}.sub{color:var(--muted)}.hotel{padding:12px 15px;background:#ffffff0a;border:1px solid var(--line);border-radius:14px;color:#dbe4ff}.grid{display:grid;grid-template-columns:1.55fr .8fr;gap:18px}.card{background:linear-gradient(145deg,#151e35ee,#10182bee);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 16px 50px #0003}.hero{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.metric{background:#ffffff08;border-radius:15px;padding:14px}.metric b{display:block;font-size:18px;margin-top:5px}.ok{color:var(--green)}.watch{color:var(--amber)}.muted{color:var(--muted)}h2{font-size:18px;margin:0 0 14px}.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:8px}.tab{white-space:nowrap;border:1px solid var(--line);background:#ffffff08;color:var(--muted);padding:9px 12px;border-radius:999px;cursor:pointer}.tab.active{background:var(--cyan);color:#06121b;border-color:transparent;font-weight:800}.day{display:none}.day.active{display:block}.event{display:grid;grid-template-columns:66px 14px 1fr;gap:12px;padding:13px 0}.time{font-weight:800;color:#dce6ff}.rail{position:relative}.dot{width:11px;height:11px;border-radius:50%;background:var(--cyan);margin-top:5px;box-shadow:0 0 0 5px #55d6e820}.rail:after{content:"";position:absolute;width:1px;background:var(--line);top:20px;bottom:-18px;left:5px}.event:last-child .rail:after{display:none}.event h3{margin:0 0 5px;font-size:16px}.event p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.chip{font-size:11px;border-radius:999px;padding:4px 8px;background:#ffffff0b;border:1px solid var(--line)}.chip.green{color:var(--green)}.chip.amber{color:var(--amber)}.chip.pink{color:var(--pink)}.map{display:inline-block;margin-top:8px;color:var(--cyan);font-size:13px;text-decoration:none}.risk{display:grid;gap:10px}.riskrow{display:grid;grid-template-columns:10px 1fr;gap:10px;padding:12px;background:#ffffff07;border-radius:13px}.light{width:9px;height:9px;border-radius:50%;margin-top:5px}.light.g{background:var(--green)}.light.a{background:var(--amber)}.light.r{background:var(--red)}.riskrow b{font-size:14px}.riskrow small{display:block;color:var(--muted);margin-top:3px;line-height:1.4}.decision{padding:13px;border:1px solid var(--line);border-radius:14px;margin:9px 0}.decision strong{display:block}.decision span{font-size:13px;color:var(--muted)}.shop{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.shop div{background:#ffffff07;padding:11px;border-radius:12px;font-size:13px}.footer{color:var(--muted);text-align:center;font-size:12px;padding:26px 0}.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:12px}.legend i{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:5px}.side{display:grid;gap:18px;align-content:start}
+@media(max-width:850px){.shell{padding:15px}.top{display:block}.hotel{margin-top:15px}.grid{grid-template-columns:1fr}.hero{grid-template-columns:1fr 1fr 1fr}.card{padding:16px;border-radius:17px}.event{grid-template-columns:56px 12px 1fr;gap:9px}}
+@media(max-width:480px){.hero{grid-template-columns:1fr}.top h1{font-size:34px}.shop{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main class="shell">
+<header class="top"><div><div class="eyebrow">TRIP CONTROL CENTER · BKK</div><h1>BANGKOK<br>TRIP CONSOLE</h1><div class="sub">OCT 08 — OCT 12 · 2026　｜　5 days · 4 nights</div></div><div class="hotel">🏨 Base Camp<br><b>Moxy Bangkok Ratchaprasong</b></div></header>
+<section class="grid"><div>
+<div class="card"><h2>Mission Status</h2><div class="hero"><div class="metric"><span class="muted">核心區域</span><b class="ok">● 優先安排</b></div><div class="metric"><span class="muted">戶外活動</span><b class="watch">● 看天氣</b></div><div class="metric"><span class="muted">行程策略</span><b>室內備案 Ready</b></div></div><div class="legend"><span><i style="background:var(--green)"></i>推薦</span><span><i style="background:var(--amber)"></i>天氣決定</span><span><i style="background:var(--red)"></i>本次不排</span></div></div>
+<div class="card" style="margin-top:18px"><h2>Daily Timeline</h2><div class="tabs" id="tabs"></div><div id="days"></div></div>
+</div>
+<aside class="side">
+<div class="card"><h2>Risk Watch</h2><div class="risk">
+<div class="riskrow"><i class="light g"></i><div><b>Ratchaprasong / Siam</b><small>住宿核心區；優先用 BTS / Skywalk，雨天最好調整。</small></div></div>
+<div class="riskrow"><i class="light a"></i><div><b>River / Outdoor</b><small>遊船與戶外景點依當日降雨、河況調整。</small></div></div>
+<div class="riskrow"><i class="light r"></i><div><b>Save One GO</b><small>距離遠＋戶外＋先前積水疑慮，本次不硬排。</small></div></div>
+</div></div>
+<div class="card"><h2>Open Decisions</h2>
+<div class="decision"><strong>10/11 Riverside Carnival Cruise</strong><span>主方案 · 晚間；天候不佳再啟動 Plan B。</span></div>
+<div class="decision"><strong>Castle Night Market</strong><span>候補，不與 10/11 遊船硬塞同一晚。</span></div>
+<div class="decision"><strong>Mungkorn Seafood</strong><span>候選；依分店、距離與當天交通再決定。</span></div>
+</div>
+<div class="card"><h2>Shopping Radar</h2><div class="shop"><div>🛒 Big C<br><span class="muted">零食 / 伴手禮</span></div><div>🧴 TOFU<br><span class="muted">保養 / 美妝</span></div><div>🏪 7-Eleven<br><span class="muted">即食 / 飲料</span></div><div>💊 Pharmacy<br><span class="muted">藥妝類</span></div></div></div>
+</aside></section>
+<div class="footer">Bangkok Trip Console 2026 · Group planning edition · 不放護照／訂位碼等私人資料</div>
+</main>
+<script>
+const plan=[
+{d:"10/8",w:"THU",items:[
+["抵達","Moxy Bangkok Ratchaprasong","入住、放行李；第一天不跨城。","green"],
+["午後","Big C · TOFU · CentralWorld · Siam","住宿周邊購物與熟悉環境；雨天也好調整。","green"],
+["晚餐","Kiew Kai Ka – CentralWorld","第一晚以飯店附近餐廳為主，降低交通壓力。","green"]]},
+{d:"10/9",w:"FRI",items:[
+["上午","Grand Palace → Wat Pho → Wat Arun","第一次曼谷的經典寺廟線；穿著注意寺廟規範。","green"],
+["午後","Talat Noi → Song Wat","老城散步、咖啡與街區探索。","green"],
+["晚上","Yaowarat → Moxy 休息","吃完回飯店補體力。","green"],
+["22:30","Fake Club","夜生活主方案；建議 Grab 往返。","pink"]]},
+{d:"10/10",w:"SAT",items:[
+["上午","Terminal 21 Asok","室內商場，天氣不穩也能走。","green"],
+["午後","回 Moxy · 休息","泰拳前保留體力與交通緩衝。","green"],
+["傍晚","前往 Rajadamnern Stadium","提早出發，避免晚高峰與雨勢拖延。","amber"],
+["晚上","Rajadamnern Muay Thai","本次泰拳主場；不再硬塞夜店。","pink"]]},
+{d:"10/11",w:"SUN",items:[
+["上午","Siam · Massage · Shopping","刻意留彈性，不排太遠。","green"],
+["16:00+","Riverside Carnival Cruise","晚間主方案；依預約時間提早報到。","amber"],
+["Plan B","Siam / CentralWorld 室內行程","若天候不適合河上活動，回到核心商圈。","green"]]},
+{d:"10/12",w:"MON",items:[
+["上午","最後採買 · Big C · 7-Eleven","只排飯店周邊，補齊購物清單。","green"],
+["之後","取行李 → Airport","不安排遠距離景點，保留機場交通緩衝。","green"]]}
+];
+const tabs=document.querySelector("#tabs"),days=document.querySelector("#days");
+function mapLink(name){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(name+" Bangkok")}
+plan.forEach((day,i)=>{let b=document.createElement("button");b.className="tab"+(i===0?" active":"");b.textContent=day.d+" "+day.w;b.onclick=()=>show(i);tabs.appendChild(b);
+let box=document.createElement("div");box.className="day"+(i===0?" active":"");box.innerHTML=day.items.map(x=>'<div class="event"><div class="time">'+x[0]+'</div><div class="rail"><i class="dot"></i></div><div><h3>'+x[1]+'</h3><p>'+x[2]+'</p><div class="chips"><span class="chip '+x[3]+'">'+(x[3]==="amber"?"看天氣":x[3]==="pink"?"重點活動":"推薦")+'</span></div><a class="map" target="_blank" rel="noopener" href="'+mapLink(x[1])+'">↗ Google Maps</a></div></div>').join("");days.appendChild(box)});
+function show(i){document.querySelectorAll(".tab").forEach((x,n)=>x.classList.toggle("active",n===i));document.querySelectorAll(".day").forEach((x,n)=>x.classList.toggle("active",n===i))}
+</script></body></html>
