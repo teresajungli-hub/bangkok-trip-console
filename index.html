@@ -78,14 +78,13 @@ function vote(i,v,el){votes[i]=votes[i]===v?"":v;localStorage.setItem("bkkVotes"
 const checked=JSON.parse(localStorage.getItem("bkkShop")||"{}");document.getElementById("shopGrid").innerHTML=shop.map((s,i)=>'<label class="shopitem"><input type="checkbox" '+(checked[i]?"checked":"")+' onchange="shopCheck('+i+',this.checked)"><span><b>'+s[0]+'</b><small>📍 '+s[1]+'　·　'+s[3]+'</small><small>'+s[2]+'</small></span></label>').join("");function shopCheck(i,v){checked[i]=v;localStorage.setItem("bkkShop",JSON.stringify(checked))}
 
 // 手動風險更新：只在使用者按鈕時執行；不把天氣預報當成淹水事實。
-const riskAreas=[
-["🌦️ 曼谷目前天氣","Bangkok weather today heavy rain forecast","確認目前降雨、雷雨與近期大雨預報。"],
-["🏨 Moxy Bangkok Ratchaprasong 周邊淹水","Moxy Bangkok Ratchaprasong flood Ratchaprasong road flooding today","鎖定飯店周邊道路、Ratchaprasong／Siam 積水與交通影響。"],
-["✈️ Suvarnabhumi Airport ↔ Moxy 路線淹水","Suvarnabhumi Airport Bangkok flood airport route Ratchaprasong flooding today","鎖定機場本身、機場聯外道路及前往 Moxy 的路線是否有淹水／交通異常。"]
+const riskSnapshot=[
+{icon:"🌦️",title:"曼谷目前天氣",level:"⚠️ 注意",cls:"amber",summary:"10/3：曼谷有分散雷雨、局部大雨與陣風；約 26–28°C / 34–36°C。泰國氣象局並提醒 10/5–6 曼谷可能有較廣泛雷雨及局部大雨。",source:"泰國氣象局 TMD · 2026/10/03",url:"https://www.tmd.go.th/en/forecast/daily"},
+{icon:"🏨",title:"Moxy Bangkok Ratchaprasong 周邊",level:"⚠️ 持續確認",cls:"amber",summary:"目前曼谷仍有多處道路積水；現有資料未足以確認 Moxy／Ratchaprasong 飯店門口正在淹水，因此不把全市災情直接套用到飯店。出發前需再確認 Ratchaprasong／Siam 即時路況。",source:"Bangkok flood status · 2026/10/03",url:"https://floodboard.org/en/status"},
+{icon:"✈️",title:"Suvarnabhumi Airport ↔ Moxy",level:"🟠 有風險",cls:"amber",summary:"機場仍維持營運；官方近期資訊指出主要聯外路線可通行，但 Lat Krabang 一帶有較深積水，建議避開並優先走 Motorway 7 或 Burapha Withi Expressway，且預留額外交通時間。",source:"Thailand.go.th / Suvarnabhumi Airport",url:"https://thailand.go.th/public/issue-focus-detail/flooding-situation-and-travel-information-to-suvarnabhumi-airport"}
 ];
-function renderRiskLinks(stamp){document.getElementById("riskUpdated").textContent=stamp?"上次手動更新："+stamp:"尚未更新。需要時按「更新最新狀況」。";document.getElementById("riskList").innerHTML=riskAreas.map(a=>'<div class="riskRow"><b>'+a[0]+'</b><p>'+a[2]+'</p><div class="sourceLinks"><a target="_blank" rel="noopener" href="https://www.google.com/search?q='+encodeURIComponent(a[1])+'">查看最新資訊 ↗</a><a target="_blank" rel="noopener" href="https://news.google.com/search?q='+encodeURIComponent(a[1])+'">查看最新新聞 ↗</a></div></div>').join("")}
-function refreshRisks(){const now=new Date().toLocaleString("zh-TW",{hour12:false});localStorage.setItem("bkkRiskChecked",now);renderRiskLinks(now);window.open("https://www.google.com/search?q="+encodeURIComponent("Bangkok weather flood today Moxy Bangkok Ratchaprasong Suvarnabhumi Airport road flooding"),"_blank")}
-renderRiskLinks(localStorage.getItem("bkkRiskChecked")||"");
-
+function renderRiskSnapshot(stamp){document.getElementById("riskUpdated").textContent=stamp?"資料基準："+stamp:"資料基準：2026/10/03（按更新可重新載入本頁資訊）";document.getElementById("riskList").innerHTML=riskSnapshot.map(r=>'<div class="riskRow"><div style="display:flex;justify-content:space-between;gap:10px"><b>'+r.icon+' '+r.title+'</b><b class="'+r.cls+'">'+r.level+'</b></div><p style="font-size:13px;line-height:1.65;color:var(--txt)">'+r.summary+'</p><div class="sourceLinks"><a target="_blank" rel="noopener" href="'+r.url+'">來源：'+r.source+' ↗</a></div></div>').join("")}
+function refreshRisks(){const now=new Date().toLocaleString("zh-TW",{hour12:false});localStorage.setItem("bkkRiskChecked",now);renderRiskSnapshot(now);alert("已重新載入風險卡。風險結論以卡片標示的官方／公開資料基準為準；網站不會自行捏造即時淹水狀態。")}
+renderRiskSnapshot(localStorage.getItem("bkkRiskChecked")||"");
 const n=document.getElementById("notes");n.value=localStorage.getItem("bkkNotes")||"";n.oninput=()=>localStorage.setItem("bkkNotes",n.value);
 </script></body></html>
